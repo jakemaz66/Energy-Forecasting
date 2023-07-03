@@ -82,7 +82,6 @@ Steps Taken and Why:
 8. Model Evaluation and Visualization: The trained models are evaluated on the validation and test sets using mean squared error (MSE) and mean absolute error (MAE) as metrics. The results are stored in dictionaries for easy comparison. Additionally, the predictions of each model are plotted against the true values to visualize their performance. 
 
 ## SARIMAX Statistical Technique
-# Time Series Energy Statistical.ipynb 
 
 This Jupyter Notebook contains code for a time series analysis project focused on predicting the energy consumption of appliances. The purpose of this project is to develop a SARIMAX model that can forecast the energy levels of certain appliances 24 hours into the future. The code in this notebook performs the data preprocessing, exploratory data analysis, statistical modeling, and visualization of the results. 
 
