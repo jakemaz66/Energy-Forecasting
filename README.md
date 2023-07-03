@@ -32,8 +32,8 @@ The following skills were utilized:
 ## Results
 The results show a few conclusions:
 1. The overall energy consumption of the appliances is decreasing over time.
-2. There is a daily and weekly seasonality to the consumption, with peak times being evening and peak days being saturdays
-3. The models predict a decrease in variablity in the energu consumption as time progresses
+2. There is a daily and weekly seasonality to the consumption, with peak times being evening and peak days being Saturdays
+3. The models predict a decrease in variability in the energy consumption as time progresses.
 
 ## Time Series Energy Deep Learning 
 
