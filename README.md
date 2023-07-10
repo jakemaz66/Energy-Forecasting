@@ -12,13 +12,13 @@ This project aims to predict energy consumption from appliances using time serie
 - [Facebook Prophet Model](#facebook-prophet-model)
 
 ## Description
-This data science project focuses on predicting energy consumption from appliances using time series analysis techniques. The goal is to develop accurate models that can forecast energy usage based on historical data. 
+This data science project focuses on predicting energy consumption from appliances using time series analysis techniques. The goal is to develop accurate models that can forecast energy usage based on historical data. From this, appliance usage can be tailored to predicted ranges and costs can be derived. Code was inspired by Marco Peixeiro in his Udemy course 'Applied Time Series Analysis in Python'
 
 ## Data
 The data used in this project consists of historical energy consumption records from appliances. It includes information such as timestamps, weather conditions, and various other features that can influence energy usage. The dataset is preprocessed and prepared for time series analysis. The dataset can be found at the UCI Machine Learning Repository at this link: https://archive.ics.uci.edu/dataset/374/appliances+energy+prediction
 
 ## Tools and Skills
-To work on this project, you will need:
+Work on this project involved:
 - Python 
 - Libraries: TensorFlow, Keras, statsmodels, Prophet
 - Jupyter Notebook or any Python IDE
@@ -33,11 +33,9 @@ The following skills were utilized:
 The results show a few conclusions:
 1. The overall energy consumption of the appliances is decreasing over time.
 2. There is a daily and weekly seasonality to the consumption, with peak times being evening and peak days being Saturdays
-3. The models predict a decrease in variability in the energy consumption as time progresses.
+3. The models predict a decrease in variability in energy consumption as time progresses.
 
 ## Time Series Energy Deep Learning 
-
-This repository contains a Jupyter Notebook file (`Time Series Energy Deep Learning.ipynb`) that focuses on modeling and predicting the dependent variable 'Appliances' in a time series dataset. The notebook implements deep learning models and visualizes the results. 
 
 Purpose:
 
@@ -83,27 +81,21 @@ Steps Taken and Why:
 
 ## SARIMAX Statistical Technique
 
-This Jupyter Notebook contains code for a time series analysis project focused on predicting the energy consumption of appliances. The purpose of this project is to develop a SARIMAX model that can forecast the energy levels of certain appliances 24 hours into the future. The code in this notebook performs the data preprocessing, exploratory data analysis, statistical modeling, and visualization of the results. 
+Purpose:
+
+The purpose of this project is to develop a SARIMAX model that can forecast the energy levels of certain appliances 24 hours into the future. The code in this notebook performs the data preprocessing, exploratory data analysis, statistical modeling, and visualization of the results. 
 
 General Structure:
 
 The notebook is structured as follows: 
 
-1. Importing Libraries and Data 
+1. Importing Libraries and Data: This section imports the necessary libraries and reads the dataset from a CSV file using pandas. 
 
-   - This section imports the necessary libraries and reads the dataset from a CSV file using pandas. 
+2. Exploratory Data Analysis: This section explores the dataset by visualizing the initial trends of each column and generating descriptive statistics. 
 
-2. Exploratory Data Analysis 
+3. Feature Engineering: This section checks for monthly and/or daily seasonality in the data. 
 
-   - This section explores the dataset by visualizing the initial trends of each column and generating descriptive statistics. 
-
-3. Feature Engineering 
-
-   - This section checks for monthly and/or daily seasonality in the data. 
-
-4. Statistical Models - SARIMAX 
-
-   - This section applies SARIMAX modeling to forecast the energy consumption. 
+4. Statistical Model SARIMAX: This section applies SARIMAX modeling to forecast the energy consumption. 
 
    - It starts by making the data stationary by taking the difference of the dependent variable. 
 
@@ -117,71 +109,33 @@ The notebook is structured as follows:
 
    - The model diagnostics are plotted to check the residuals. 
 
-5. Making Future Predictions 
-
-   - This section makes future predictions using the SARIMAX model. 
+5. Making Future Predictions: This section makes future predictions using the SARIMAX model. 
 
    - The predicted values and confidence intervals are obtained using the get_prediction function. 
 
    - The real values, predicted values, and confidence intervals are plotted to visualize the results. 
 
-6. Predictions on Test Set and Performance Calculation 
-
-   - This section calculates the mean squared error (MSE) as a measure of model performance. 
+6. Predictions on Test Set and Performance Calculation: This section calculates the mean squared error (MSE) as a measure of model performance. 
 
 Steps Taken and Why:
 
-1. Importing Libraries and Data 
+1. Importing Libraries and Data. The necessary libraries for data manipulation, visualization, and modeling are imported. The dataset is loaded from a CSV file into a pandas DataFrame. 
 
-   - The necessary libraries for data manipulation, visualization, and modeling are imported. 
+2. Exploratory Data Analysis. Initial trends of each column are visualized using line plots. Descriptive statistics are generated to gain insights into the data. 
 
-   - The dataset is loaded from a CSV file into a pandas DataFrame. 
+3. Feature Engineering. The data is checked for monthly and/or daily seasonality using Fourier Transform. The frequency domain analysis is performed to identify periodic patterns. 
 
-2. Exploratory Data Analysis 
+4. Statistical Models - SARIMAX. SARIMAX modeling is used to forecast the energy consumption. 
 
-   - Initial trends of each column are visualized using line plots. 
+5. Making Future Predictions. Future predictions are made using the fitted SARIMAX model. 
 
-   - Descriptive statistics are generated to gain insights into the data. 
-
-3. Feature Engineering 
-
-   - The data is checked for monthly and/or daily seasonality using Fourier Transform. 
-
-   - The frequency domain analysis is performed to identify periodic patterns. 
-
-4. Statistical Models - SARIMAX 
-
-   - SARIMAX modeling is used to forecast the energy consumption. 
-
-   - The data is transformed to achieve stationarity. 
-
-   - The auto correlation and partial auto correlation functions are used to determine the appropriate parameters for the SARIMAX model. 
-
-   - The optimize_SARIMAX function is used to find the best combination of parameters. 
-
-   - The SARIMAX model is fitted with the selected parameters. 
-
-   - Model diagnostics are plotted to assess the model's performance. 
-
-
-5. Making Future Predictions 
-
-   - Future predictions are made using the fitted SARIMAX model. 
-
-   - The predicted values and confidence intervals are obtained. 
-
-   - The real values, predicted values, and confidence intervals are plotted to visualize the results. 
-
-6. Predictions on Test Set and Performance Calculation 
-
-   - The model's performance is evaluated by calculating the mean squared error (MSE) between the predicted and actual values. 
+6. Predictions on Test Set and Performance Calculation. The model's performance is evaluated by calculating the mean squared error (MSE) between the predicted and actual values. 
 
 ## Facebook Prophet Model
-This repository contains a Jupyter Notebook file (Time Series Energy Prophet.ipynb) that focuses on modeling and predicting the dependent variable 'Appliances' in a time series dataset. The notebook implements the Prophet model for time series forecasting and visualizes the results.
 
 Purpose:
 
-1. The purpose of this notebook is to demonstrate the application of the Prophet model for time series analysis and forecasting. Specifically, it aims to predict the 'Appliances' variable 24 hours into the future using the Prophet model. The notebook also includes exploratory data analysis and hyperparameter tuning steps to optimize the model's performance.
+The purpose of this notebook is to demonstrate the application of the Prophet model for time series analysis and forecasting. Specifically, it aims to predict the 'Appliances' variable 24 hours into the future using the Prophet model. The notebook also includes exploratory data analysis and hyperparameter tuning steps to optimize the model's performance.
 
 General Structure:
 
