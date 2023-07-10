@@ -12,7 +12,7 @@ This project aims to predict energy consumption from appliances using time serie
 - [Facebook Prophet Model](#facebook-prophet-model)
 
 ## Description
-This data science project focuses on predicting energy consumption from appliances using time series analysis techniques. The goal is to develop accurate models that can forecast energy usage based on historical data. From this, appliance usage can be tailored to predicted ranges and costs can be derived. Code was inspired by Marco Peixeiro in his Udemy course 'Applied Time Series Analysis in Python'
+This data science project focuses on predicting energy consumption from appliances using time series analysis techniques. The goal is to develop accurate models that can forecast energy usage based on historical data. From this, appliance usage can be tailored to predicted ranges and costs can be derived. Code was inspired by Marco Peixeiro in his Udemy course 'Applied Time Series Analysis in Python'. Note that paramweter optimization functions were run in separate jupyter notebook rather than google colab due to connectivity retraints.
 
 ## Data
 The data used in this project consists of historical energy consumption records from appliances. It includes information such as timestamps, weather conditions, and various other features that can influence energy usage. The dataset is preprocessed and prepared for time series analysis. The dataset can be found at the UCI Machine Learning Repository at this link: https://archive.ics.uci.edu/dataset/374/appliances+energy+prediction
@@ -21,7 +21,7 @@ The data used in this project consists of historical energy consumption records 
 Work on this project involved:
 - Python 
 - Libraries: TensorFlow, Keras, statsmodels, Prophet
-- Jupyter Notebook or any Python IDE
+- Jupyter Notebook, google colab, or any Python IDE
 
 The following skills were utilized:
 - Time series analysis
@@ -95,25 +95,9 @@ The notebook is structured as follows:
 
 3. Feature Engineering: This section checks for monthly and/or daily seasonality in the data. 
 
-4. Statistical Model SARIMAX: This section applies SARIMAX modeling to forecast the energy consumption. 
+4. Statistical Model SARIMAX: This section applies SARIMAX modeling to forecast the energy consumption. It starts by making the data stationary by taking the difference of the dependent variable. The ad fuller test is performed to ensure stationarity. Auto correlation and partial auto correlation functions are plotted to determine the parameters for the SARIMAX model. The best parameters are selected using the optimize_SARIMAX function. The SARIMAX model is fitted with the selected parameters. The model diagnostics are plotted to check the residuals. 
 
-   - It starts by making the data stationary by taking the difference of the dependent variable. 
-
-   - The ad fuller test is performed to ensure stationarity. 
-
-   - Auto correlation and partial auto correlation functions are plotted to determine the parameters for the SARIMAX model. 
-
-   - The best parameters are selected using the optimize_SARIMAX function. 
-
-   - The SARIMAX model is fitted with the selected parameters. 
-
-   - The model diagnostics are plotted to check the residuals. 
-
-5. Making Future Predictions: This section makes future predictions using the SARIMAX model. 
-
-   - The predicted values and confidence intervals are obtained using the get_prediction function. 
-
-   - The real values, predicted values, and confidence intervals are plotted to visualize the results. 
+5. Making Future Predictions: This section makes future predictions using the SARIMAX model. The predicted values and confidence intervals are obtained using the get_prediction function. The real values, predicted values, and confidence intervals are plotted to visualize the results. 
 
 6. Predictions on Test Set and Performance Calculation: This section calculates the mean squared error (MSE) as a measure of model performance. 
 
